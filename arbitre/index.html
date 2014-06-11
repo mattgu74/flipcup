@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flipcup</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar blue">
+        <div class="app-title">Flipcup Tournament</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="ajout_team">Ajouter une équipe</div>
+		  <div class="app-button" data-target="match">Lancer un match</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page" data-page="ajout_team">
+      <div class="app-topbar blue">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Ajout d'une team</div>
+      </div>
+      <div class="app-content">
+		<form class="app-section">
+			Nom : <input class="app-input" name="nom" placeholder="Nom de la team">
+			Login 1 : <input class="app-input" name="l1">
+			Login 2 : <input class="app-input" name="l2">
+			Login 3 : <input class="app-input" name="l3">
+			Login 4 : <input class="app-input" name="l4">
+			Login 5 : <input class="app-input" name="l5">
+			<div class="app-button green app-submit" data-clickable-class="active">Ajouter</div>
+			<input type="submit" style="display: none;">
+		</form>
+      </div>
+    </div>
+	
+	<div class="app-page" data-page="match">
+      <div class="app-topbar blue">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Lancer un match</div>
+      </div>
+      <div class="app-content">
+		  <div class="app-section">
+			Choisir un match :
+			<ul class="app-list">
+			  <li class="app-button" data-target="debut_match">Match 1</li>
+			  <li class="app-button">Match 2</li>
+			  <li class="app-button">Match 3</li>
+			</ul>
+		  </div>
+      </div>
+    </div>
+	
+	<div class="app-page" data-page="debut_match">
+      <div class="app-topbar blue">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Flipcup</div>
+      </div>
+      <div class="app-content">
+		  <div class="app-section">
+			Team <span id="t1"></span><br>
+			Nombre de joueurs : <span id="nb1"></span>
+		  </div>
+		  <div class="app-section">
+			Team <span id="t2"></span><br>
+			Nombre de joueurs : <span id="nb1"></span>
+		  </div>
+		  <div class="app-section">
+			<div class="app-button green" data-target="round">Lancer le round</div>
+		  </div>
+      </div>
+    </div>
+	
+	<div class="app-page" data-page="round">
+      <div class="app-topbar blue">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Flipcup</div>
+      </div>
+      <div class="app-content">
+		  <div class="app-section">
+			Team <span id="t1"></span><br>
+			<div class="app-button red" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);">One shot</div>
+			<div class="app-button red" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);">Special Trick</div>
+			<div class="app-button green" data-target="round">Win</div>
+		  </div>
+		  <div class="app-section">
+			Team <span id="t2"></span><br>
+			<div class="app-button red" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);">One shot</div>
+			<div class="app-button red" data-clickable-class="active" style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);">Special Trick</div>
+			<div class="app-button green" data-target="round">Win</div>
+		  </div>
+      </div>
+    </div>
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
